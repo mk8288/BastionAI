@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BastionAI Cyber-Terminal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="glow-orb magenta"></div>
+        <div class="glow-orb cyan"></div>
+    </div>
+    
+    <div class="terminal-container glass-panel">
+        <div class="terminal-header">
+            <div class="controls">
+                <span class="control red"></span>
+                <span class="control yellow"></span>
+                <span class="control green"></span>
+            </div>
+            <div class="title">BASTION_AI_TERMINAL // SECURE_LINK</div>
+            <div class="api-key-container">
+                <select id="model-input">
+                    <option value="baidu/cobuddy:free">baidu/cobuddy:free</option>
+                    <option value="deepseek/deepseek-v4-flash">deepseek/deepseek-v4-flash</option>
+                    <option value="openai/gpt-chat-latest">openai/gpt-chat-latest</option>
+                    <option value="anthropic/claude-haiku-latest">anthropic/claude-haiku-latest</option>
+                    <option value="qwen/qwen3.6-flash">qwen/qwen3.6-flash</option>
+                    <option value="google/gemma-4-26b-a4b-it:free">google/gemma-4-26b-a4b-it:free</option>
+                </select>
+                <input type="password" id="api-key-input" placeholder="OpenRouter API Key (Required for Chat)" autocomplete="off">
+            </div>
+        </div>
+        
+        <div class="terminal-body" id="terminal-output">
+            <!-- Terminal content injected by JS -->
+        </div>
+        
+        <div class="terminal-input-area">
+            <span class="prompt">bastion_ai_root:~#</span>
+            <input type="text" id="cmd-input" placeholder="Enter command" autocomplete="off" spellcheck="false" autofocus>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
